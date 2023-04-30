@@ -90,9 +90,11 @@ header nav a:hover{
 .bar, .circle{
     color: white;
 }
+
 /* Responsive Menu for Header Section */
 @media(max-width: 768px){
     .bars{
+        cursor: pointer;
         display: block;
     }
     header .navigation{
@@ -164,6 +166,7 @@ header nav a:hover{
     background: transparent;
     color: var(--main-color);
 }
+
 /* Responsive Content for Home Section */
 @media(max-width: 768px){
     .home-content h1{
@@ -183,7 +186,7 @@ header nav a:hover{
 /* ------------------------------------------------------------------------------------------ */
 
 /* start details section */
-.bg-service{
+.service-section{
     width: 90%;
     margin: 200px auto;
     display: flex;
@@ -192,7 +195,7 @@ header nav a:hover{
     grid-row-gap: 20px;
     flex-wrap: wrap;
 }
-.bg-service .service-one{
+.service-section .service-one{
     width: 32%;
     position: relative;
     overflow: hidden;
@@ -228,13 +231,15 @@ header nav a:hover{
 .service-one:hover img{
     transform: scale(1.1);
 }
+
+/* Responsive Details Section */
 @media(max-width: 991px){
-    .bg-service .service-one{
+    .service-section .service-one{
         width: 49%;
     }
 }
 @media(max-width: 576px){
-    .bg-service .service-one{
+    .service-section .service-one{
         width: 100%;
     }
 }
@@ -243,11 +248,11 @@ header nav a:hover{
 /* ------------------------------------------------------------------------------------------ */
 
 /* start about section */
-.bg-about{
+.about-section{
     margin: 100px 0;
     width: 100%;
 }
-.bg-about .about-flex{
+.about-section .about-flex{
     display: flex;
 }
 .about-flex .about1{
@@ -300,17 +305,30 @@ header nav a:hover{
     color: #FFF;
 }
 .about1-txt h3{
-    font-weight: 700;
     text-transform: uppercase;
     font-family: 'Pushster', cursive;
     width: 100%;
     text-align: center;
+    font-size: 20px!important;
 }
 .about1-txt .txt-inside{
     width: 70%;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+}
+
+/* Responsive About Section */
+@media(max-width: 1066px){
+    .about1-txt {
+        font-size: 12px;;
+    }
+}
+
+@media(max-width: 866px){
+    .about1-txt h3{
+        font-size: 16px!important;
+    }
 }
 @media(max-width: 768px){
     .about-flex{
@@ -319,17 +337,79 @@ header nav a:hover{
     .about-flex .about1{
         width: 100%;
     }
+    .about1-txt h3{
+        font-size: 15px;
+    }
 
 }
 /* end about section */
 
 /* ------------------------------------------------------------------------------------------ */
 
+/* start aboutUs section */
+
+.aboutUs{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+
+.aboutUs-section h1{
+    text-align: center;
+    color: var(--main-color);
+}
+
+.aboutUs-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+}
+
+.aboutUs-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 10px;
+}
+
+.aboutUs-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutUs-col p{
+    padding: 0;
+    text-align: justify;
+    color: rgb(174, 174, 174);
+}
+
+.aboutUs-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    color: var(--main-color);
+}
+
+/* Responsive AboutUs Section */
+@media(max-width: 700px){
+    .aboutUs-row{
+        flex-direction: column;
+        margin-right: 70px;
+    }
+}
+
+/* end aboutUs section */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
 /* start gallery section */
-.bg-gallery{
+.gallery-section{
     margin: 100px 0;
 }
-.bg-gallery .gallery-flex{
+.gallery-section .gallery-flex{
     display: flex;
     justify-content: center;
 }
@@ -352,17 +432,18 @@ header nav a:hover{
     display: flex;
     flex-direction: column;
 }
-.bg-gallery .event{
+.gallery-section .event{
     position: relative;
     opacity: 0.7;
 }
-.bg-gallery .event:hover{
+.gallery-section .event:hover{
     opacity: 1;
     transition: .4s ease-in-out;
 }
+
 /* Responsive Gallery Section */
 @media(max-width: 768px){
-    .bg-gallery .gallery-flex{
+    .gallery-section .gallery-flex{
         flex-wrap: wrap;
     }
     .gallery-flex .image-one{
@@ -385,7 +466,7 @@ header nav a:hover{
 /* ------------------------------------------------------------------------------------------ */
 
 /* start menu section */
-.bg-menu{
+.menu-section{
     background-image: url(img/home-1-parallax-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -464,6 +545,8 @@ header nav a:hover{
 .menu-link a:hover{
     background: transparent;
 }
+
+/* Responsive Menu Section */
 @media(max-width: 991px){
     .menu-flex .menu1{
         width: 100%;
@@ -474,11 +557,11 @@ header nav a:hover{
 /* ------------------------------------------------------------------------------------------ */
 
 /* start contact section */
-.bg-contact{
+.contact-section{
     margin: 100px 0;
     width: 100%;
 }
-.bg-contact .contact-flex{
+.contact-section .contact-flex{
     display: flex;
 }
 .contact-flex .contact1{
@@ -507,7 +590,6 @@ header nav a:hover{
     color: #FFF;
 }
 .contact1-txt h3{
-    font-weight: 700;
     text-transform: uppercase;
     font-family: 'Pushster', cursive;
     width: 100%;
